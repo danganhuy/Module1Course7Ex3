@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bài 3</title>
+    <title>Bài 4</title>
 </head>
 <body>
     <label><input id="rad" name="rad" type="number" placeholder="Nhập bán kính"></label><br>
-    <button type="button" id="button">Tính diện tích hình tròn</button>
+    <button type="button" id="button">Tính chu vi hình tròn</button>
     <div id="result"></div>
     <script>
         function CircleArea() {
             let rad = parseInt(document.getElementById("rad").value);
-            let area = Math.pow(rad, 2) * 3.14;
-            document.getElementById("result").innerHTML = "Diện tích hình tròn = " + area.toFixed(2);
+            let area = 2 * rad * 3.14;
+            document.getElementById("result").innerHTML = "Chu vi hình tròn = " + area.toFixed(2);
         }
         document.getElementById("button").addEventListener("click", CircleArea)
     </script>
