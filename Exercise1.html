@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+    <label><input id="diemLy" name="diemLy" type="number" placeholder="Điểm lý"></label> <br>
+    <label><input id="diemHoa" name="diemHoa" type="number" placeholder="Điểm hóa"></label> <br>
+    <label><input id="diemAnh" name="diemAnh" type="number" placeholder="Điểm Anh"></label>
+    <button type="button" id="submit">Tính điểm</button>
+    <div id="total">Tổng = ...</div>
+    <div id="ave">Trung bình = ...</div>
+    <script>
+        function CalculateScore() {
+            let ly = parseInt(document.getElementById("diemLy").value);
+            let hoa = parseInt(document.getElementById("diemHoa").value);
+            let anh = parseInt(document.getElementById("diemAnh").value);
+            let total = ly + hoa + anh;
+            let ave = total / 3;
+            document.getElementById("total").innerHTML = "Tổng = " + total;
+            document.getElementById("ave").innerHTML = "Trung bình = " + ave.toFixed(1);
+        }
+        
+        document.getElementById("submit").addEventListener("click", CalculateScore)
+    </script>
+</body>
+</html>

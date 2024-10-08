@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+    <label><input id="inputC" name="C" type="text" placeholder="Nhập Celsius"></label><br>
+    <button type="button" id="button">Chuyển sang độ 0F</button>
+    <div id="result"></div>
+    <script>
+        function C_To_F() {
+            let c = parseInt(document.getElementById("inputC").value);
+            let f = (c * 9 / 5) + 32;
+            document.getElementById("result").innerHTML = c + "C = " + f + "F";
+        }
+        document.getElementById("button").addEventListener("click", C_To_F)
+    </script>
+</body>
+</html>
