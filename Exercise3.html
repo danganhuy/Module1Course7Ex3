@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+    <label><input id="dia" name="dia" type="number" placeholder="Nhập đường kính"></label><br>
+    <button type="button" id="button">Tính diện tích hình tròn</button>
+    <div id="result"></div>
+    <script>
+        function CircleArea() {
+            let dia = parseInt(document.getElementById("dia").value);
+            let area = Math.pow(dia, 2) * 3.14;
+            document.getElementById("result").innerHTML = "Diện tích hình tròn = " + area.toFixed(2);
+        }
+        document.getElementById("button").addEventListener("click", CircleArea)
+    </script>
+</body>
+</html>
